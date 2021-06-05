@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Main page
+{% endblock %}
+
+{% block content %}
+    <p>Result is: {{ result }}!</p>
+    {% if calc %}
+        {% for el in calc %}
+            <h3>{{ el.timestamp }} - {{ el.value }}</h3>
+        {% endfor %}
+    {% else %}
+        <p>У нас нет записей</p>
+    {% endif %}
+{% endblock %}
