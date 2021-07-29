@@ -1,14 +1,19 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-Main page
+Calculacion
 {% endblock %}
 
 {% block content %}
-    <p>Result is: {{ result }}!</p>
+    <p>В адресной строке введите числа для сложения ("...calc/a/b")</p>
+    {% if result %}
+        <h3>Result is: {{ result }}!</h3>
+    {% else %}
+        <h3>Previous results:</h3>
+    {% endif %}
     {% if calc %}
         {% for el in calc %}
-            <h3>{{ el.timestamp }} - {{ el.value }}</h3>
+            <p>{{ el.timestamp }} - {{ el.value }}</p>
         {% endfor %}
     {% else %}
         <p>У нас нет записей</p>

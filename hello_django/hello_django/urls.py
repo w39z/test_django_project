@@ -21,7 +21,4 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("main.urls")),
-    # path('', MainView.as_view()),
-    # path('calc/', SecView.as_view(), name='main_calc'),
-    # path('calc/<int:a>/<int:b>', views.index, name='calc'),
 ]

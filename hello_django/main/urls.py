@@ -7,6 +7,6 @@ urlpatterns = [
     path('', views.index, name='main'),
     path('about', views.about, name='about'),
     path('create', views.create, name='create'),
-    path('calc/', SecView.as_view(), name='main_calc'),
+    path('calc/', views.calculate, name='main_calc'),
     path('calc/<int:a>/<int:b>', views.calculate, name='calc'),
 ]

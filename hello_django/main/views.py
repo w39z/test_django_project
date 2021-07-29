@@ -10,7 +10,7 @@ from django.shortcuts import render, redirect
 def index(request):
     tasks = Task.objects.order_by('-id')
     return render(request, 'main/index.html', context={
-        'who': 'World',
+        'who': 'user',
         'tasks': tasks
     })
 
@@ -39,7 +39,9 @@ def create(request):
 
 def calculate(request, a=0, b=0):
     value = a + b
-    History(value=value).save()
+    if value != 0:
+        History(value=value).save()
+
     calc = History.objects.order_by('-id')[:10]
     return render(request, 'main/calculation.html', context={
         'result': value,
@@ -53,5 +55,5 @@ class SecView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['calc'] = 'calcul'
+        context['calc'] = ''
         return context
