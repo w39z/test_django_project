@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../crud-with-auth/.idea/crud-with-auth.iml" filepath="$PROJECT_DIR$/../crud-with-auth/.idea/crud-with-auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/django_project.iml" filepath="$PROJECT_DIR$/.idea/django_project.iml" />
       <module fileurl="file://$PROJECT_DIR$/../justTrash/.idea/justTrash.iml" filepath="$PROJECT_DIR$/../justTrash/.idea/justTrash.iml" />
     </modules>
